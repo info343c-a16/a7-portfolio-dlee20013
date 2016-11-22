@@ -2,11 +2,12 @@ import React from 'react';
 
 var Render_Projects = React.createClass({
     render() {
+      console.log(this.props.img);
         return(
             <div className="eachProject">
-                <a target="_blank" href={this.props.url}>- {this.props.name}</a>
+                <a className="eachAssignment" target="_blank" href={this.props.url}>{this.props.name}</a>
                 <blockquote><em>{this.props.description}</em></blockquote>
-                <p>{this.props.pdate}</p>
+                <p className="date">Content Published: {this.props.pdate}</p>
             </div>
         )
     }

@@ -10,9 +10,7 @@ import $ from 'jquery';
       },
 
       componentDidMount(){
-        console.log("hello");
         $.get('data/portfolio_a7_data.csv').then(function(data) {
-          console.log(data);
           var parsedData = Baby.parse(data, {header:true});
           this.setState({projects:parsedData.data})
           console.log(parsedData.data);
